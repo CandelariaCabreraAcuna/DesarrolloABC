@@ -41,7 +41,7 @@ export const UsersPage = () => {
 
             <div className="container my-4">
                 <div className='card'>
-                <h2>Users App</h2>
+                <h2>Sistema Usuarios</h2>
                 <div className="row">
                     {!visibleForm || <div className="col"></div>}
                     <div className="col">
