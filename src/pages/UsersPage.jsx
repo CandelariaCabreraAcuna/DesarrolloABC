@@ -54,15 +54,15 @@ export const UsersPage = () => {
                             <input 
                                 className="form-control me-2" 
                                 type="search" 
-                                placeholder="Buscar" 
+                                placeholder="Escriba la busqueda aqui..." 
                                 aria-label="Search"
                                 onChange={handleSearchChange} 
                             />
-                            <button 
+                            <label 
                                 className="btn btn-outline-success" 
-                                type="submit">
+                                >
                                 Buscar
-                            </button>
+                            </label>
                         </form>
                         
                         { 
