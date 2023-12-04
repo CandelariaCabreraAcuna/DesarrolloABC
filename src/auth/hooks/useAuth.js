@@ -4,13 +4,13 @@ import { loginReducer } from '../reducers/loginReducer';
 import { loginUser } from "../services/authServices";
 import { useNavigate } from "react-router-dom";
 
-const initialLogin = JSON.parse(sessionStorage.getItem('login')) || {
+const initialLogin = JSON.parse(sessionStorage.getItem('index')) || {
     isAuth: false,
     user: undefined,
 }
 
 export const useAuth = () => {
-    const [login, dispatch ] = useReducer(loginReducer, initialLogin)
+    const [index, dispatch ] = useReducer(loginReducer, initialLogin)
     const navigate = useNavigate();
 
     const handlerLogin = ({username, password}) => {
@@ -18,10 +18,10 @@ export const useAuth = () => {
         if (isLogin) {
             const user = { username: 'admin'}
             dispatch({
-                type: 'login',
+                type: 'index',
                 payload: user,
             });
-            sessionStorage.setItem('login', JSON.stringify({
+            sessionStorage.setItem('index', JSON.stringify({
                 isAuth: true,
                 user,
             }));
@@ -35,12 +35,12 @@ export const useAuth = () => {
         dispatch({
             type: 'logout',
         });
-        sessionStorage.removeItem('login');
-        navigate('/login'); // or wherever you want to redirect after logout
+        sessionStorage.removeItem('index');
+        navigate('/index'); // or wherever you want to redirect after logout
     }
     
     return{
-        login, 
+        index, 
         handlerLogin,
         handlerLogout
     }

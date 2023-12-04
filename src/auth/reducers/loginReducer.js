@@ -1,7 +1,7 @@
 export const loginReducer = (state = {}, action) => {
 
     switch(action.type) {
-        case 'login':
+        case 'index':
         
         return {
             isAuth: true,

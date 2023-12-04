@@ -1,5 +1,5 @@
 
-export const Navbar = ({ login, handlerLogout }) => {
+export const Navbar = ({ index, handlerLogout }) => {
   return (
     
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -20,7 +20,7 @@ export const Navbar = ({ login, handlerLogout }) => {
         </button>
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavLogout" >
             <span className="nav-item nav-link text-primary mx-3">
-                { login.user?.username }
+                { index.user?.username }
             </span>
             <button
             onClick={handlerLogout}

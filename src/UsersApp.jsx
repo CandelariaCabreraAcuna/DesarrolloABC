@@ -5,21 +5,21 @@ import { UserRoutes } from "./routes/UserRoutes";
 
 export const UsersApp = () => {
 
-    const {login, handlerLogin, handlerLogout} = useAuth();
+    const {index, handlerLogin, handlerLogout} = useAuth();
 
     return (
         <Routes>
             {
-            login.isAuth
+            index.isAuth
                 ? ( 
-                    <Route path='/*' element={ <UserRoutes login={login} handlerLogout={handlerLogout} /> }/>
+                    <Route path='/*' element={ <UserRoutes index={index} handlerLogout={handlerLogout} /> }/>
                   ) 
                 : 
                 <>
-                <Route path='/login' 
+                <Route path='/index' 
                         element={<LoginPage 
                         handlerLogin={handlerLogin} />}/>
-                <Route path='/*' element={ <Navigate to={"/login"}/> }/>
+                <Route path='/*' element={ <Navigate to={"/index"}/> }/>
                 </>
                    
             }

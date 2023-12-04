@@ -4,10 +4,10 @@ import { UsersPage } from "../pages/UsersPage"
 import { Navigate } from 'react-router-dom';
 
 
-export const UserRoutes = ({login, handlerLogout}) => {
+export const UserRoutes = ({index, handlerLogout}) => {
     return(
         <>
-        <Navbar login={login} handlerLogout={handlerLogout}></Navbar>
+        <Navbar index={index} handlerLogout={handlerLogout}></Navbar>
         <Routes>
             <Route path="users" element={<UsersPage/>}/>
             <Route path="/" element={<Navigate to="/users"/>}/>
