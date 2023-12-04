@@ -51,7 +51,7 @@ export const UserForm = ({
       <form onSubmit={onSubmit}>
         <input
           className="form-control my-3 w-75"
-          placeholder="Username"
+          placeholder="Nombre"
           name="username"
           value={username}
           onChange={onInputChange}
@@ -59,7 +59,7 @@ export const UserForm = ({
         {id > 0 || (
           <input
             className="form-control my-3 w-75"
-            placeholder="Password"
+            placeholder="Contraseña"
             type="password"
             name="password"
             value={password}
@@ -68,7 +68,7 @@ export const UserForm = ({
         )}
         <input
           className="form-control my-3 w-75"
-          placeholder="Email"
+          placeholder="Correo"
           name="email"
           value={email}
           onChange={onInputChange}
